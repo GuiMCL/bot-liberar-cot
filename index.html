@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <link rel="stylesheet" href="style.css">
 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto cantelle</title>
+    <script href="calcular.js"></script>
+    
+
+</head>    
+
+                       <body>
+                               <nav id='menu'>
+                                          <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                                          <ul>
+                                            <li><a href='https://www.princesadoscampos.com.br/'>Home</a></li>
+                                            <li><a class='dropdown-arrow' href='http://'>Simuladores</a>
+                                              <ul class='sub-menus'>
+                                                <li><a href='http://'>CANTELLE GO</a></li>
+                                                <li><a href='http://'>COLCHAO</a></li>
+                                              </ul>
+                                        </nav>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <div class="container">
+                            <div id="conteudo">
+                                <p id="font">Simulador | CANTELLE</p>
+                                <br>
+                                <div>
+                                    <label for="valornota"> Digite o valor da Nota: </label> <br>
+                                    <input type="text" id="valornota" name="valornota" required>
+                                </div>
+<br>
+                                <div>
+                                    <label for="peso1    "> Digite o peso: </label> <br>
+                                    <input type="text" id="peso1" name="peso1" required>
+                                </div>
+<br>
+                                <div>
+                                    <p>VALOR TOTAL DO FRETE: </p>
+                                    <input type="text" id="pagar" name="pagar" disabled>
+                                    <input id="botao1" type="button" value="Calcular" onclick="calcular()" onmouseover="botao(this)" onmouseout="botao(this)">
+                                 </div>
+            </div>
+        </div>
+    
+                    <script>
+                            
+
+                    function calcular(){
+                    var valornota             = document.getElementById("valornota").value;
+                    var resultado         = document.getElementById("pagar");
+                    var creditoParcelado  = document.getElementById("parcelado");
+                    var peso             = document.getElementById("peso1").value;
+                    var grissgo            = 0;
+                    var desconto            = 0;
+                    var total              =0;
+                    var fretogo                    = 0;
+                    
+                    if(valornota>99)
+                    if(peso>0.1)
+                  
+                    {
+                            
+                            valornota = valornota*0.4/100;
+                            peso = peso*1.15*30/100;
+                            }
+                             if(peso<115){
+                                peso = 115
+                            }
+                         
+                            total = valornota + peso;
+
+                        
+
+                    }
+                
+
+                resultado.value = "Pagar:"+total;
+
+                    </script>
+</body>
+</html>
